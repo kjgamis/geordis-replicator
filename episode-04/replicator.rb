@@ -1,3 +1,5 @@
+# require 'pry'
+
 class Replicator
 
   # When the Enterprise calls Replicator.new, this method executes.
@@ -66,6 +68,9 @@ class Replicator
     #   glass_inside_replicator.inside.contents
     transport_ingredients_to_glass
 
+
+    # binding.pry
+
     # This methods mixes the ingredients in the glass around.
     # It returns nil, even if successful, but if you look at:
     #   glass_inside_replicator.inside.contents
@@ -114,7 +119,10 @@ class Replicator
       @enterprise.transporter.energize(
         # Geordi is in a jokey mood and
         # reprograms the replicator
-        @enterprise.pantry.find_ingredient('banana'),
+
+        # binding.pry
+
+        @enterprise.pantry.find_ingredient(ingredient_name),
         @enterprise.pantry.shelf,
         glass_inside_replicator.inside
       )

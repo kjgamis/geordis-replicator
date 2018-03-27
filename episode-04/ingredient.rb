@@ -10,7 +10,7 @@ class Ingredient
       Episode::EPISODE_NUMBERS.map do |number|
         Episode.new.recipe.ingredients
       end
-    other_ingredients = ['banana', 'apple', 'orange']
+    other_ingredients = ['tea', 'sugar']
 
     [episode_recipe_ingredients + other_ingredients].flatten.uniq
   end
