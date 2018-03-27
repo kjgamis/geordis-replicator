@@ -1,3 +1,5 @@
+require 'pry'
+
 class Replicator
 
   # When the Enterprise calls Replicator.new, this method executes.
@@ -66,6 +68,8 @@ class Replicator
     #   glass_inside_replicator.inside.contents
     transport_ingredients_to_glass
 
+    # binding.pry
+
     # This methods mixes the ingredients in the glass around.
     # It returns nil, even if successful, but if you look at:
     #   glass_inside_replicator.inside.contents
@@ -77,6 +81,8 @@ class Replicator
     # If you read back `glass.temperature`, then it should be set
     # to the temperature the recipe calls for if this method executed properly.
     adjust_temperature
+
+    # binding.pry
 
     # This method moves the glass from @inside_replicator to @plate
     # so that the character can pick it up and drink it.
@@ -169,6 +175,7 @@ class Replicator
     # Transport glass from reactor back to inside the replicator.
     # If successful, @enterprise.reactor.core will now be empty
     # and @inside_replicator will once again contain the glass.
+
     transport_glass_from_reactor
 
   end
@@ -182,6 +189,7 @@ class Replicator
   end
 
   def transport_glass_from_reactor
+    # binding.pry
     @enterprise.transporter.energize(
       @glass,
       @enterprise.reactor.core,
@@ -190,6 +198,9 @@ class Replicator
   end
 
   def transport_glass_to_replicator_plate
+
+    # binding.pry
+
     @enterprise.transporter.energize(
       glass_inside_replicator,
       @inside_replicator,

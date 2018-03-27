@@ -31,7 +31,7 @@ class Reactor
   end
 
   def stock
-    @dilithium_crystals += 100
+    @dilithium_crystals += 200
   end
 
   def draw_power(amount = 1)
@@ -51,6 +51,7 @@ class Reactor
   end
 
   def turn_off
+    binding.pry
     @on = false
   end
 
@@ -68,7 +69,7 @@ class Reactor
 
   def heat_items_in_core
     @core.contents.each do |item|
-      datas_cat_eats_dilithium_crystals
+      # datas_cat_eats_dilithium_crystals
       item.temperature += 1 if draw_power
     end
   end
