@@ -1,3 +1,5 @@
+# require 'pry'
+
 class Replicator
 
   # When the Enterprise calls Replicator.new, this method executes.
@@ -66,6 +68,8 @@ class Replicator
     #   glass_inside_replicator.inside.contents
     transport_ingredients_to_glass
 
+    # binding.pry
+
     # This methods mixes the ingredients in the glass around.
     # It returns nil, even if successful, but if you look at:
     #   glass_inside_replicator.inside.contents
@@ -73,10 +77,13 @@ class Replicator
     # If it's successful, all the ingredients should still be in the glass.
     mix
 
+    # binding.pry
+
     # This method adjusts the temperature of the contents in the glass.
     # If you read back `glass.temperature`, then it should be set
     # to the temperature the recipe calls for if this method executed properly.
     adjust_temperature
+
 
     # This method moves the glass from @inside_replicator to @plate
     # so that the character can pick it up and drink it.
@@ -135,6 +142,8 @@ class Replicator
   # what the recipes calls for.
   def adjust_temperature
 
+    # binding.pry
+
     # Abort if there is no glass inside the replicator.
     return unless glass_inside_replicator
 
@@ -146,7 +155,7 @@ class Replicator
 
     # Setup variables for temperature adjustment loop
     desired_temperature         = @recipe.temperature
-    maximum_adjustments_allowed = 5
+    maximum_adjustments_allowed = 6
     number_of_adjustments       = 0
 
     # Keep adjusting temperature until desired temperature is reached

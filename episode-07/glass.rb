@@ -5,7 +5,7 @@
 
 class Glass
 
-  LUKE_WARM = 37
+  LUKE_WARM = 80
 
   def initialize
     @inside      = Location.new
