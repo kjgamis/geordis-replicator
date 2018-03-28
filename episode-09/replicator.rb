@@ -1,3 +1,5 @@
+require 'pry'
+
 class Replicator
 
   # When the Enterprise calls Replicator.new, this method executes.
@@ -41,6 +43,8 @@ class Replicator
   # it returns what's expect.
   def replicate(recipe)
 
+    # binding.pry
+
     # Setup an instance variable for the recipe
     # so that other methods can see what the recipe is
     @recipe = recipe
@@ -72,6 +76,8 @@ class Replicator
     # then you may find the ingredients order has changed.
     # If it's successful, all the ingredients should still be in the glass.
     mix
+
+    binding.pry
 
     # This method adjusts the temperature of the contents in the glass.
     # If you read back `glass.temperature`, then it should be set
