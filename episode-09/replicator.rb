@@ -1,4 +1,4 @@
-require 'pry'
+# require 'pry'
 
 class Replicator
 
@@ -43,8 +43,6 @@ class Replicator
   # it returns what's expect.
   def replicate(recipe)
 
-    # binding.pry
-
     # Setup an instance variable for the recipe
     # so that other methods can see what the recipe is
     @recipe = recipe
@@ -70,6 +68,8 @@ class Replicator
     #   glass_inside_replicator.inside.contents
     transport_ingredients_to_glass
 
+    # binding.pry
+
     # This methods mixes the ingredients in the glass around.
     # It returns nil, even if successful, but if you look at:
     #   glass_inside_replicator.inside.contents
@@ -77,7 +77,7 @@ class Replicator
     # If it's successful, all the ingredients should still be in the glass.
     mix
 
-    binding.pry
+    # binding.pry
 
     # This method adjusts the temperature of the contents in the glass.
     # If you read back `glass.temperature`, then it should be set
@@ -152,7 +152,7 @@ class Replicator
 
     # Setup variables for temperature adjustment loop
     desired_temperature         = @recipe.temperature
-    maximum_adjustments_allowed = 50
+    maximum_adjustments_allowed = 70
     number_of_adjustments       = 0
 
     # Keep adjusting temperature until desired temperature is reached
@@ -175,7 +175,7 @@ class Replicator
     # Transport glass from reactor back to inside the replicator.
     # If successful, @enterprise.reactor.core will now be empty
     # and @inside_replicator will once again contain the glass.
-    # transport_glass_from_reactor
+    transport_glass_from_reactor
 
   end
 
